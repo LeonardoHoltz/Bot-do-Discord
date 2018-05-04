@@ -44,8 +44,19 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    # Switch de mensagens com respostas
     if message.content == "O meu consagrado":
-        await client.send_message(message.channel, "Ás ordens meu patrão.")
+        await client.send_message(message.channel, "Ás ordens, meu patrão. :ok_hand: :thumbsup: ")
+    if message.content == "Sim" or "sim":
+        await.client.send_message(message.channel, "Vou anotar o pedido.  :pencil: ")
+    if message.content == ":frowning:" or ":sad:" or ":(":
+        await.client.send_message(message.channel, "Não fique triste, já trago o litrão. :beer: ")
+    if message.content == "não" or "Não" or "nao" or "Nao":
+        await.client.send_message(message.channel, "Irei me retirar, com licença, patrão.  :runner: ")
+    if message.content == "oi" or "Oi" or "Oi!" or "oi!":
+        await.client.send_message(message.channel, ":man_in_tuxedo:  Quais são as ordens, meu patrão? ")
+    if message.content == "@JRMensa#2312":
+        await.client,send_message(message.channel, ":ata: ATA"
     if message.content.upper().startswith('CONSAGRADO SAY'):
         args = message.content.split(" ")
         await client.send_message(message.channel, "%s" % (" ".join(args[2:]))) #join fará com que " ", mostre os elementos da lista de args, separados pelo caractere em questão.
