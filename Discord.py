@@ -50,3 +50,5 @@ async def on_message(message):
         args = message.content.split(" ")
         await client.send_message(message.channel, "%s" % (" ".join(args[2:]))) #join fará com que " ", mostre os elementos da lista de args, separados pelo caractere em questão.
         #O índice começa em 2 para pular a parte onde diz "CONSAGRADO SAY".
+
+client.run("<token>")
