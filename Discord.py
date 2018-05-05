@@ -69,6 +69,12 @@ async def on_message(message):
             print("Mensagem deletada")
     if message.content == "O meu consagrado":
         await client.send_message(message.channel, "Ás ordens, meu patrão. :ok_hand: :thumbsup:")
+    if message.content in ["oi","Oi"]:
+    	await client.send_message(message.channel,"Seja bem-vindo, meu patrão! :man_in_tuxedo:  ")
+    if message.content == "@JRMensa#2312":
+    	await client.send_message(message.channel, ":ata: ATA :ata:")
+    if message.content in [":(",":sad:",":'("]:
+    	await client.send_message(message.channel, "Não fique triste, já te trago litrão. :beer:")
     if message.content.upper().startswith('CONSAGRADO SAY'):
         args = message.content.split(" ")
         await client.send_message(message.channel, "%s" % (" ".join(args[2:]))) #join fará com que " ", mostre os elementos da lista de args, separados pelo caractere em questão.
